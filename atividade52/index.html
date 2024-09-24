@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Idade Média:</h1>
+        <h2 id="idadeMedia"></h2>
+        <h1>Idades maiores de 18:</h1>
+        <h2 id="idadeMaiorDe18"></h2>
+        <h1>Idades menores de 5:</h1>
+        <h2 id="idadeMenorde5"></h2>
+        <h1>Maior idade:</h1>
+        <h2 id="idadeMaior"></h2>
+
+    </div>
+
+    <script>
+        let h1idadeMedia = document.getElementById("idadeMedia");
+        let h1idadeMaiorDe18 = document.getElementById("idadeMaiorDe18");
+        let h1idadeMenorde5 = document.getElementById("idadeMenorde5");
+        let h1IdadeMaior = document.getElementById("idadeMaior");
+        let idadeMaior = null;
+        let idadeMenor = null;
+        let idadeMedia = null;
+        let totalIdadesMaioresDe18 = null;
+        let totalIdadeMenoresDe5 = null;
+
+        window.onload = function(){
+            
+            for(let i = 1;i <= 10;i++){
+                let idade = parseInt(prompt(`Digite a ${i} idade:`));
+                idadeMedia += idade;
+                
+                if(idade > idadeMaior || idadeMaior == null){
+                    idadeMaior = idade;
+                }
+
+                if(idade > 18){
+                    totalIdadesMaioresDe18 += 1;
+                }
+
+                if(idade < 5){
+                    totalIdadeMenoresDe5 += 1;
+                }
+            }
+
+            h1idadeMedia.innerHTML = idadeMedia /= 10;
+            h1idadeMaiorDe18.innerHTML = totalIdadesMaioresDe18;
+            h1idadeMenorde5.innerHTML = totalIdadeMenoresDe5;
+            h1IdadeMaior.innerHTML = idadeMaior;
+
+            
+        }
+    </script>
+</body>
+</html>

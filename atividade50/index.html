@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <div>
+            <h2>Os numeros sorteados foram:</h2>
+            <h3 id="resultadoSorteados"></h3>
+        </div>
+
+        <div>
+            <h2>Numeros acima de 5:</h2>
+            <h3 id="resultadoAcimaDeCinco"></h3>
+        </div>
+
+        <div>
+            <h2>Numeros divisiveis por 3:</h2>
+            <h3 id="resultadoDivisiveisPorTres"></h3>
+        </div>
+
+    </div>
+
+    <script>
+        window.onload = function(){
+            let h3ResultadoSorteados = document.getElementById("resultadoSorteados");
+            let h3ResultadoAcimaDeCinco = document.getElementById("resultadoAcimaDeCinco");
+            let resultadoDivisiveisPorTres = document.getElementById("resultadoDivisiveisPorTres");
+
+            for(let i = 0;i < 20;i++){
+                let numeroAleatorio = Math.floor(Math.random() * 11);//tirar 0 dps
+
+                h3ResultadoSorteados.innerHTML += " "+numeroAleatorio;
+
+                if(numeroAleatorio > 5){
+                    h3ResultadoAcimaDeCinco.innerHTML += " "+numeroAleatorio;
+                }
+
+                if(numeroAleatorio % 3 === 0){
+                    resultadoDivisiveisPorTres.innerHTML += " "+numeroAleatorio;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

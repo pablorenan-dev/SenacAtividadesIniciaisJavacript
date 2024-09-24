@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #aparece{
+            font-size: 50pt;
+            text-decoration: underline;
+        }
+
+        .buttonAdd{
+            background-color: green;
+            font-size: 20pt;
+            height: 50px;
+            width: 50px;
+            
+        }
+
+        .buttonAdd:hover{
+            transform: scale(1.2);
+        }
+
+        .buttonRemove{
+            background-color: red;
+            font-size: 20pt;
+            height: 50px;
+            width: 50px;
+        }
+
+        .buttonRemove:hover{
+            transform: scale(1.2);
+        }
+
+        .buttonMult{
+            background-color: blue;
+            font-size: 20pt;
+            height: 50px;
+            width: 50px;
+        }
+
+        .buttonMult:hover{
+            transform: scale(1.2);
+        }
+
+        .buttonDivi{
+            background-color: purple;
+            font-size: 20pt;
+            height: 50px;
+            width: 50px;
+        }
+
+        .buttonDivi:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" id="n1">
+        <input type="number" id="n2">
+        <input type="number" id="n3">
+    </div>
+    <div>
+        <input type="number" id="n4">
+        <input type="number" id="n5">
+        <input type="number" id="n6">
+    </div>
+    <div>
+        <input class="buttonAdd" type="button" value="+" onclick="somar();">
+        <input class="buttonRemove" type="button" value="-" onclick="diminuir();">
+        <input class="buttonMult" type="button" value="*" onclick="multiplicar();">
+        <input class="buttonDivi" type="button" value="/" onclick="dividir();">
+    </div>
+    <div id="aparece">
+        
+    </div>
+
+    <script>
+        function somar(){
+            let n1      = parseInt(document.getElementById("n1").value);
+            let n2      = parseInt(document.getElementById("n2").value);
+            let n3      = parseInt(document.getElementById("n3").value);
+            let n4      = parseInt(document.getElementById("n1").value);
+            let n5      = parseInt(document.getElementById("n2").value);
+            let n6      = parseInt(document.getElementById("n3").value);
+            let aparece = document.getElementById("aparece");
+
+            aparece.innerHTML = (n1 + n2 + n3 + n4 + n5 + n6);
+   
+        }
+
+        function diminuir(){
+            let n1      = parseInt(document.getElementById("n1").value);
+            let n2      = parseInt(document.getElementById("n2").value);
+            let n3      = parseInt(document.getElementById("n3").value);
+            let n4      = parseInt(document.getElementById("n1").value);
+            let n5      = parseInt(document.getElementById("n2").value);
+            let n6      = parseInt(document.getElementById("n3").value);
+            let aparece = document.getElementById("aparece");
+
+            aparece.innerHTML = (n1 - n2 - n3 - n4 - n5 - n6);
+
+        }
+
+        function multiplicar(){
+            let n1      = parseInt(document.getElementById("n1").value);
+            let n2      = parseInt(document.getElementById("n2").value);
+            let n3      = parseInt(document.getElementById("n3").value);
+            let n4      = parseInt(document.getElementById("n1").value);
+            let n5      = parseInt(document.getElementById("n2").value);
+            let n6      = parseInt(document.getElementById("n3").value);
+            let aparece = document.getElementById("aparece");
+
+            aparece.innerHTML = (n1 * n2 * n3 * n4 * n5 * n6);
+
+        }
+
+        function dividir(){
+            let n1      = parseInt(document.getElementById("n1").value);
+            let n2      = parseInt(document.getElementById("n2").value);
+            let n3      = parseInt(document.getElementById("n3").value);
+            let n4      = parseInt(document.getElementById("n1").value);
+            let n5      = parseInt(document.getElementById("n2").value);
+            let n6      = parseInt(document.getElementById("n3").value);
+            let aparece = document.getElementById("aparece");
+
+            aparece.innerHTML = (n1 / n2 / n3 / n4 / n5 / n6);
+
+        }
+    </script>
+</body>
+</html>

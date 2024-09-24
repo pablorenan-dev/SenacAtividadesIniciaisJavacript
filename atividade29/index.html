@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de funcionario</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Insira as informações do funcionario e veja o seu novo salario com reajuste.</h1>
+        <ul>
+            <li>
+                <label>Nome: </label>
+                <input type="text" id="nomeFuncionario">
+            </li>
+            <li>
+                <label>Salario atual: </label>
+                <input type="number" id="salarioFuncionario">
+            </li>
+            <li>
+                <label>Anos trabalhados na empresa: </label>
+                <input type="number" id="anosTrabalhadosEmpresaFuncionario">
+            </li>
+            <li>
+                <button onclick="calcularSalarioFuncionario();">Calcular</button>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div>
+
+        <h1 id="resultado"></h1>
+
+    </div>
+
+    <script>
+        function calcularSalarioFuncionario(){
+            let h1Resultado = document.getElementById("resultado");
+            let salarioNovo = 0;
+            let salarioAntigo = parseFloat(document.getElementById("salarioFuncionario").value);
+            let anosTrabalhados = parseInt(document.getElementById("anosTrabalhadosEmpresaFuncionario").value);
+            
+            if(anosTrabalhados <= 3){
+                salarioNovo = (salarioAntigo) + (salarioAntigo * 0.03);
+            }else if(anosTrabalhados > 3 && anosTrabalhados < 10){
+                salarioNovo = (salarioAntigo) + (salarioAntigo * 0.125);
+            }else if(anosTrabalhados >= 10){
+                salarioNovo = (salarioAntigo) + (salarioAntigo * 0.20);
+            }
+
+            h1Resultado.innerHTML = `O novo salario do funcionario é: ${salarioNovo}`;
+        }
+    </script>
+</body>
+</html>

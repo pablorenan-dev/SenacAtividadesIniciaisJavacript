@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 525px;
+    width: 800px;
+    background-color: rgb(204, 204, 204);
+    text-align: center;
+    font-family: "Chivo", sans-serif;
+    border-radius: 12px;
+}
+
+#opcaoJogador{
+    background-color: red;
+    height: 350px;
+    width: 350px;
+    float: left;
+    margin-top: 0px;
+    margin-left: 40px;
+    font-size: 30pt;
+    font-family: "Chivo", sans-serif;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+#opcaoJogador:hover{
+    background-color: rgb(255, 85, 85);
+}
+
+#opcaoMaquina{
+    background-color: rgb(0, 110, 255);
+    height: 350px;
+    width: 350px;
+    float: left;
+    margin-top: 0px;
+    margin-left: 20px;
+    font-size: 30pt;
+    font-family: "Chivo", sans-serif;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+#opcaoMaquina:hover{
+    background-color: rgb(96, 165, 255);
+}
+
+#titulo{
+    font-size: 22pt;
+}
+
+#subtitulo{
+    font-size: 18pt;
+}
+
+#imagemPessoa{
+    height: 100px;
+    width: 100px;
+}
+
+#imagemRobo{
+    height: 100px;
+    width: 100px;
+}

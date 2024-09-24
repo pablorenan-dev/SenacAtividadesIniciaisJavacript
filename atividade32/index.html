@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chute o numero correto</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>Escolha um número inteiro de 1 a 5</h1>
+        <ul>
+            <li>
+                <input type="number" placeholder="numero" id="numeroEscolhido">
+            </li>
+            <br>
+            <li>
+                <button onclick="gerarEverificarNumero();">Escolher</button>
+            </li>
+
+        </ul>
+            <h2 id="resultado"></h2>
+ 
+    </div>
+
+
+
+
+    <script>
+        let numeroAleatorio = Math.floor(Math.random() * 5) + 1; //cria numero aleatorio e usa o floor pra arredondar ele pra cima. Ex: 0.34 -> 1 | 
+                                                                     // * 5 delimita o maximo , e o +1 é para o valor nunca ser 1
+                                                                     //essa variavel global funciona porque estamos fazendo tudo numa coisa so, nao em arquivos separados
+        function gerarEverificarNumero(){
+            let h2Resultado = document.getElementById("resultado");
+            let numero = parseFloat(document.getElementById("numeroEscolhido").value);
+                                                                     
+            if(numero === numeroAleatorio){
+                h2Resultado.innerHTML = `Você acertou o numero!`;
+                h2Resultado.style.color = "green";
+            }else{
+                h2Resultado.innerHTML = `Você errou o numero...`;
+                h2Resultado.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

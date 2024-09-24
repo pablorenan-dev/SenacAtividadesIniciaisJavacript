@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de carros alugados</title>
+    <style>
+        #resultado{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira os Km percorridos pelo carro alugado e a quantidade de dias pelos quais ele foi alugado</h1>
+        <label>Km: </label>
+        <input type="number" placeholder="Km" id="km">
+        <br>
+        <label>Qnt de dias alugados: </label>
+        <input type="number" placeholder="Dias alugados" id="diasAlugados">
+        <br>
+        <button onclick="calcularAluguelTotal();">Calcular</button>
+    </div>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+    <script>
+        function calcularAluguelTotal(){
+            let km           = parseFloat(document.getElementById("km").value);
+            let diasAlugados = parseFloat(document.getElementById("diasAlugados").value);
+            let h1Resultado  = document.getElementById("resultado");
+            let aluguelTotal = (diasAlugados * 90) + (km * 0.20);
+
+            h1Resultado.innerHTML = `O aluguel total do carro a ser pagado é: R$ ${aluguelTotal.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

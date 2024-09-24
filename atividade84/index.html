@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = function(){
+            let vetorIdadePessoas = [];
+            let vetorNomePessoas = [];
+            let vetorPessoasMenoresDeIdade = [];
+
+
+            for(let i = 0;i < 9;i++){
+                let nomePessoa = prompt(`Insira o nome da pessoa ${i+1}:`);
+                let idadePessoa = parseInt(prompt(`Insira a idade da pessoa ${i+1}:`));
+                vetorNomePessoas.push(nomePessoa);
+                vetorIdadePessoas.push(idadePessoa);
+                if(idadePessoa < 18){
+                    vetorPessoasMenoresDeIdade.push(nomePessoa+": "+idadePessoa+" anos");
+
+                }
+            }
+
+            alert(`Pessoas menores de idade: ${vetorPessoasMenoresDeIdade}`);
+        }
+    </script>
+</body>
+</html>

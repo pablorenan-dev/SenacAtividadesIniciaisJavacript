@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores relativos em medidas</title>
+</head>
+<body>
+    <div>
+        <label>Digite a sua distância em metros</label>
+        <br>
+        <input id="valor01" type="number" placeholder="metros">
+        <br>
+        <button onclick="calcMedidas()">Ver outras medidas</button>
+    </div>
+    <div>
+        <h3 id="tituloDistancia"></h3>
+        <ul>
+            <li>
+                <label id="Km"></label>
+            </li>
+            <li>
+                <label id="Hm"></label>
+            </li>
+            <li>
+                <label id="Dam"></label>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function calcMedidas(){
+            let valor             = parseFloat(document.getElementById("valor01").value);
+            let titulo            = document.getElementById("tituloDistancia");
+            let campoKm           = document.getElementById("Km")
+            let campoHm           = document.getElementById("Hm")
+            let campoDam          = document.getElementById("Dam")
+            let campoKmResultado  = (valor / 1000);
+            let campoHmResultado  = (valor / 100);
+            let campoDamResultado = (valor / 10);
+
+            campoKm.innerHTML  = (campoKmResultado+"Km");
+            campoHm.innerHTML  = (campoHmResultado+"Hm");
+            campoDam.innerHTML = (campoDamResultado+"Dam");
+            titulo.innerHTML = ("A distância de "+valor+"m corresponde a:")
+        }
+    </script>
+</body>
+</html>

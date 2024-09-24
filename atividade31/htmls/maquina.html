@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Maquina</title>
+    <link rel="stylesheet" href="../styles/maquinaStyle.css">
+</head>
+<body>
+   
+    <div id="main">
+        <a href="index.html"><button id="voltar">Voltar</button></a>
+        <p id="titulo">Modo Maquina</p>
+        <p id="subtitulo">Escolha uma opção</p>
+        <div id="jogadorDiv">
+            <div id="opcoesJogo">
+                <button onclick="main('1')" class="opcoesJogoBotao">Pedra</button>
+                <br>
+                <button onclick="main('2')" class="opcoesJogoBotao">Papel</button>
+                <br>
+                <button onclick="main('3')" class="opcoesJogoBotao">Tesoura</button>
+            </div>
+        </div>
+        <div id="maquinaDiv">
+            <img id="imagemRobo" src="https://cdn-icons-png.flaticon.com/512/5091/5091636.png">
+            <p>Maquina</p>
+            <strong id="maquina"></strong>
+        </div>
+    </div>
+
+    <script src="../scripts/maquinaScript.js"></script>
+</body>
+</html>

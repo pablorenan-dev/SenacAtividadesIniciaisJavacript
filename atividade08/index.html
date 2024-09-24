@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de media ponderada de alunos</title>
+    <style>
+        .numbers{
+            height:12px;
+            width:125px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Insira as notas e as medias</h1>
+        <label>Primeira nota:</label> 
+        <input type="number" class="numbers" id="n1" placeholder="Primeira nota">
+        <label>1º peso:</label>
+        <input type="number" class="numbers" id="p1" placeholder="Peso da 1 nota">
+        <br>
+
+        <label>Segunda nota:</label> 
+        <input type="number" class="numbers" id="n2" placeholder="Segunda nota">
+        <label>2º peso:</label>
+        <input type="number" class="numbers" id="p2" placeholder="Peso da 2 nota">
+        <br>
+
+        <label>Terceira nota:</label> 
+        <input type="number" class="numbers" id="n3" placeholder="Terceira nota">
+        <label>3º peso:</label>
+        <input type="number" class="numbers" id="p3" placeholder="Peso da 3 nota">
+        <br>
+
+        <label>Quarta nota: &nbsp</label> 
+        <input type="number" class="numbers" id="n4" placeholder="Quarta nota">
+        <label>4º peso:</label>
+        <input type="number" class="numbers" id="p4" placeholder="Peso da 4 nota">
+        <br>
+
+        <button onclick="calcularMedia()">Calcular</button>
+    </div>
+
+    <div>
+        <h1 id="resultado"></h1>
+
+    </div>
+
+    <script>
+        function calcularMedia(){
+            //Notas Start
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let n2 = parseFloat(document.getElementById("n2").value);
+            let n3 = parseFloat(document.getElementById("n3").value);
+            let n4 = parseFloat(document.getElementById("n4").value);
+            //Notas End
+            //Pesos Start
+            let p1 = parseFloat(document.getElementById("p1").value);
+            let p2 = parseFloat(document.getElementById("p2").value);
+            let p3 = parseFloat(document.getElementById("p3").value);
+            let p4 = parseFloat(document.getElementById("p4").value);
+            //Pesos End
+            
+            let calculo = (((n1 * p1) + (n2 * p2) + (n3 * p3) + (n4 * p4)) / (p1 + p2 + p3 + p4));
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = (`Resultado Final: ${calculo}`)
+        }
+    </script>
+</body>
+</html>

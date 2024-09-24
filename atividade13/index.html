@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de promocao de salario de salario</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira o salario do funcionario para aumentar o salario em 15%</h1>
+        <label>Salario: </label>
+        <input id="salario" type="number" placeholder="Salario">
+        <br>
+        <button onclick="calcularSalario();">Calcular o novo salario</button>
+    </div>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+        function calcularSalario(){
+            let salario = parseFloat(document.getElementById("salario").value)
+            let h1Resultado = document.getElementById("resultado");
+            let precoPromocional = (salario + (salario * 0.15));
+
+            h1Resultado.innerHTML = `O novo salario do funcionario (15% de aumento), de acordo com o salario que voce escreveu é: ${precoPromocional}`
+        }
+    </script>
+</body>
+</html>

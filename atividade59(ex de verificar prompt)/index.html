@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = function(){
+            let isContinuando = true;
+            let sexo = null;
+            let idade = null;
+            let maiorIdade = null;
+            let totalIdadeHomens = 0;
+            let totalHomens = 0;
+            let menorIdadeMulher = null;
+
+            var alertaAdicional = "Digite o sexo do usuario(F/M):";
+
+            while(isContinuando){
+                sexo = prompt(alertaAdicional);
+                alertaAdicional = "Digite o sexo do usuario(F/M):";
+                if(sexo !== "F" && sexo !== "M"){
+                    alertaAdicional = "Digite apenas F ou M:";
+                }else{
+                    idade = parseInt(prompt("Digite a idade:"));
+
+                    if(sexo === "M"){
+                        totalHomens++;
+                        totalIdadeHomens += idade;
+                    }else{
+                        if(menorIdadeMulher === null){
+                            menorIdadeMulher = idade;
+                        }
+
+                        if(menorIdadeMulher > idade){
+                            menorIdadeMulher = idade;
+                        }
+                    }
+
+                    if(maiorIdade === null){
+                        maiorIdade = idade;
+                    }
+
+                    //Achar a maior idade
+                    if(maiorIdade < idade){
+                        maiorIdade = idade;
+                    }
+
+                    let promptDesejaContinuar = prompt("Voce deseja adicionar outra pessoa?(S/N):");
+
+                    if(promptDesejaContinuar === "N"){
+                        isContinuando = false;
+                    }   
+                }
+            }
+
+            
+
+            let mediaIdadehomens = totalIdadeHomens / totalHomens;
+
+            alert(`\nA maior idade é ${maiorIdade}\n
+                    Foram cadastrados ${totalHomens} homens\n
+                    A mulher mais jovem tem a idade de ${menorIdadeMulher}\n
+                    A media da idade dos homens é de ${mediaIdadehomens}`);
+        }
+    </script>
+</body>
+</html>

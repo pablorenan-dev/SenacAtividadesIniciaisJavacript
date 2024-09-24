@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar se triangulo é possivel</title>
+    <style>
+        h1{
+            text-decoration: underline;
+        }
+        #pai{  /*parent do mainContainer*/
+            /*position: relative; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #mainContainer{
+            border: 2px black solid;
+            border-radius: 10px;
+            /*position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);*/
+        }
+    </style>
+</head>
+<body>
+    <div id="pai">
+    <div id="mainContainer">
+    <div>
+        <h1>LOGICA INVERTIDA. PARTE 2</h1> 
+        <h2>Insira os valores das linhas, e veja se elas formam um triangulo</h2>
+        <ul>
+            <li>
+                <label>Segmento 1: </label>
+                <input type="number" placeholder="Escreva aqui" id="segmento1">
+            </li>
+            <li>
+                <label>Segmento 2: </label>
+                <input type="number" placeholder="Escreva aqui" id="segmento2">
+
+            </li>
+            <li>
+                <label>Segmento 3: </label>
+                <input type="number" placeholder="Escreva aqui" id="segmento3">
+            </li>
+            <br>
+            <li>
+                <button onclick="verificarSeResultaEmTriangulo()">Verificar se resultam em um triangulo</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        function verificarSeResultaEmTriangulo(){
+            let segmento1 = parseFloat(document.getElementById("segmento1").value);
+            let segmento2 = parseFloat(document.getElementById("segmento2").value);
+            let segmento3 = parseFloat(document.getElementById("segmento3").value);
+            let h1Resultado = document.getElementById("resultado");
+
+
+           if((segmento1 + segmento2) < segmento3){
+                h1Resultado.innerHTML = `os valores nao formam um triangulo`;
+           }else if((segmento1 + segmento3) < segmento2){
+                h1Resultado.innerHTML = `os valores nao formam um triangulo`;
+           }else if((segmento2 + segmento3) < segmento1){
+                h1Resultado.innerHTML = `os valores nao formam um triangulo`;
+           }else{
+                h1Resultado.innerHTML = `os valores formam um triangulo`;
+           }
+            
+
+            }
+        //     if(segmento3 < (segmento1 + segmento2)){
+        //         if(segmento2 < (segmento1 + segmento3)){
+        //             if(segmento1 < (segmento3 + segmento2)){
+        //                 h1Resultado.innerHTML = `os valores formam um triangulo`;
+        //             }else{
+        //                 h1Resultado.innerHTML = `os valores nao formam um triangulo`;
+        //             }
+        //         }else{
+        //             h1Resultado.innerHTML = `os valores nao formam um triangulo`;
+        //         }
+        //     }else{
+        //         h1Resultado.innerHTML = `os valores nao formam um triangulo`;
+        //     }
+        // }
+    </script>
+</body>
+</html>

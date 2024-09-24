@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste de salario</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #teste{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="teste">
+
+        <h1>Preencha os campos, e veja o reajuste do salario do funcionario</h1>
+
+        <ul>
+            <li>
+                <label>Salario atual do funcionario:</label>
+                <input id="salarioFunconario" type="number">
+            </li>
+            <li>
+                <label>
+                    Anos trabalhados na empresa:
+                </label>
+                <input id="anosTrabalhadosSalario" type="number">
+            </li>
+            <li>
+                <label>Escolha o seu sexo</label>
+                <ul>
+                    <li>
+                        <input id="sexoFuncionarioF" type="radio" name="sexo">
+                        <label>Feminino</label>
+                    </li>
+                    <li>
+                        <input id="sexoFuncionarioM" type="radio" name="sexo">
+                        <label>Masculino</label>
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <button onclick="calcularSalarioReajustado();">Calcular salario reajustado</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <div>
+
+        <h1 id="resultado"></h1>
+
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

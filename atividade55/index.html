@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="all">
+
+        <h1>O programa gerou um numero aleatorio entre 1 e 10</h1>
+        <h2>-Advinhe o numero. Voce tem 4 tentativas</h2>
+    </div>
+
+    <script>
+
+        window.onload = function advinharNumero(){
+            let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            let tentativa = 4;
+
+            for(let i = 4;i >= 1;i--){
+                let numeroAdvinha = parseInt(prompt(`Você tem ${tentativa} tentativa(s)\nAdvinhe o valor: `));
+                tentativa--;
+
+                if(numeroAdvinha === numeroAleatorio){
+                    alert("Você acertou o número!");
+                    break;
+                }else if(tentativa === 0){
+                    alert("Você perdeu...")
+                }else{
+                    alert(`Você errou o número...\nVoce tem ${tentativa} tentativa(s) ainda....`);
+                }
+            }
+            
+            
+        }
+
+    </script>
+</body>
+</html>

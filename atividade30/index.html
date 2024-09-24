@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar se triangulo é possivel</title>
+    <style>
+        #gato{
+            src: none;
+        }
+    </style>
+<body>
+    
+    <div>
+
+        <h1>Insira os valores das linhas, e veja se elas formam um triangulo e qual tipo de triangulo ele é.</h1>
+        <ul>
+            <li>
+                <label>Segmento 1: </label>
+                <input type="number" placeholder="Escreva aqui" id="segmento1">
+            </li>
+            <li>
+                <label>Segmento 2: </label>
+                <input type="number" placeholder="Escreva aqui" id="segmento2">
+
+            </li>
+            <li>
+                <label>Segmento 3: </label>
+                <input type="number" placeholder="Escreva aqui" id="segmento3">
+            </li>
+            <br>
+            <li>
+                <button onclick="verificarSeResultaEmTriangulo()">Verificar se resultam em um triangulo</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <div>
+        <h1 id="resultado"></h1>
+        <img id="gato">
+    </div>
+
+    <script>
+        function verificarSeResultaEmTriangulo(){
+            let segmento1 = parseFloat(document.getElementById("segmento1").value);
+            let segmento2 = parseFloat(document.getElementById("segmento2").value);
+            let segmento3 = parseFloat(document.getElementById("segmento3").value);
+            let tipoTriangulo = "";
+            let h1Resultado = document.getElementById("resultado");
+            let gato = document.getElementById("gato");
+
+            // if(segmento1 < (segmento2 + segmento3) && segmento2 < (segmento1 + segmento3) && segmento3 < (segmento2 + segmento1)){
+            //     if(segmento1 === segmento2 && segmento2 === segmento3 && segmento1 === segmento3){
+            //         tipoTriangulo = "EQUILATERO";
+            //     }else if(segmento1 === segmento2 || segmento2 === segmento3 || segmento1 === segmento3){
+            //         tipoTriangulo = "ISÒSCELES";
+            //     }else if(segmento1 !== segmento2 && segmento2 !== segmento3 && segmento1 !== segmento3){
+            //         tipoTriangulo = "ESCALENO";
+            //     }
+                
+            //     h1Resultado.innerHTML = `Os valores formam um triangulo. Sendo ele um triangulo ${tipoTriangulo}`
+            // }else{
+            //     h1Resultado.innerHTML = "Os valores não formam um triangulo."
+            // }
+            gato.src = "https://gifdb.com/images/high/funny-cat-on-computer-ctl4fo8liqvadtb8.webp";
+            gato.style.height = "100px";
+            gato.style.width = "400px";
+        }
+    </script>
+</body>
+</html>

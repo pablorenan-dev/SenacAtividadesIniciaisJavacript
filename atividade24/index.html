@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de preco de passagem</title>
+    <style>
+        *{
+            font-family: Tahoma,Verdana, Geneva, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Calcule o preço da sua passagem de onibus</h1>
+        <h2>(R$0.50 por km até 200Km, e 0.45 para viagens mais longas)</h2>
+
+        <ul>
+            <li>
+                <label>Km percorridos</label>
+                <input type="number" placeholder="Km" id="kmPercorridos">
+            </li>
+            <li>
+                <button onclick="CalcularPrecoDaPassagem();">Calcular preço</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+        function CalcularPrecoDaPassagem(){
+            let kmPercorridos = parseFloat(document.getElementById("kmPercorridos").value)
+            let h1Resultado   = document.getElementById("resultado");
+            let valorTotalAte200km = (kmPercorridos * 0.50);
+            let valorTotalDepois200km = (kmPercorridos * 0.45);
+            
+            if(kmPercorridos <= 200.00){
+                h1Resultado.innerHTML = `A sua viagem vai custar em total R$ ${valorTotalAte200km.toFixed(2)}<br>(0.50 por km)`
+            }else if(kmPercorridos > 200.00){
+                h1Resultado.innerHTML = `A sua viagem vai custar em total R$ ${valorTotalDepois200km.toFixed(2)}<br>(0.45 por km)`
+            }
+
+        }
+    </script>
+</body>
+</html>

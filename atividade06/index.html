@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira o valor</h1>
+        <input type="number" id="valor" placeholder="Insira seu valor aqui">
+        <button onclick="calcular()">Ver resultados</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <h2 id="mostraDobro">Dobro do seu numero:</h2>
+        <h2 id="motraTerca">Terca parte do seu numero:</h2>
+    </div>
+
+    <script>
+        function calcular(){
+            let valor       = parseInt(document.getElementById("valor").value);
+            
+            let valorDobro  = (valor * 2);
+            let valorTerca  = (valor / 3).toFixed(2);
+            let mostraDobro = document.getElementById("mostraDobro");
+            let mostraTerca = document.getElementById("motraTerca");
+
+            mostraDobro.innerHTML = ("Dobro do seu numero:"+(valorDobro))
+            mostraTerca.innerHTML = ("Terca parte do seu numero:"+(valorTerca))
+        }
+    </script>
+</body>
+</html>

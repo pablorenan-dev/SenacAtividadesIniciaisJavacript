@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valor antecessor e sucessor</title>
+</head>
+<body>
+    <div>
+        <h1>Insira um valor</h1>
+
+        <input id="valor" type="number" placeholder="Insira aqui o valor">
+
+        <button onclick="mostrarAntesEDepoisNum()" >Mostrar</button>
+    </div>
+
+    <div>
+        <h1 id="nAnte">Numero antecessor: </h1>
+        <h1 id="nAtual">Numero atual: </h1>
+        <h1 id="nSucer">Numero sucessor: </h1>
+    </div>
+
+    <script>
+        function mostrarAntesEDepoisNum(){
+            let valor = parseInt(document.getElementById("valor").value);
+            let nAnte = document.getElementById("nAnte");
+            let nSucer = document.getElementById("nSucer");
+            let nAtual = document.getElementById("nAtual");
+
+            nAnte.innerHTML = ("Numero antecessor: "+(valor-1))
+            nAtual.innerHTML = ("Numero atual: "+(valor))
+            nSucer.innerHTML = ("Numero sucessor: "+(valor+1))
+        }
+    </script>
+</body>
+</html>

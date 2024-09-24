@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <h2>Média total da altura:</h2>
+        <h3 id="mediaTotalAltura"></h3>
+        <h2>Pessoas que pesam mais de 90kg:</h2>
+        <h3 id="pessoasMaisDe90kg"></h3>
+        <h2>Pessoas que pesam menos de 50kg e tem menos de 1.60m de altura</h2>
+        <h3 id="pessoasMenosDe50kgEMenosDe1.60m"></h3>
+        <h2>Pessoas quem pesam mais de 100kg e tem mais de 1.90m de altura</h2>
+        <h3 id="pessoasMaisDe100kgEMaisDe1.90m"></h3>
+
+    </div>
+
+    <script>
+        window.onload = function(){
+            let h2MediaTotalAltura = document.getElementById("mediaTotalAltura");
+            let h2PessoasMaisDe90kg = document.getElementById("pessoasMaisDe90kg");
+            let h2pessoasMenosDe50kgEMenosDe1ponto60m = document.getElementById("pessoasMenosDe50kgEMenosDe1.60m");
+            let h2pessoasMaisDe100kgEMaisDe1ponto90m = document.getElementById("pessoasMaisDe100kgEMaisDe1.90m");
+            let mediaAltura = null;
+            let pessoasMaisDe90kg = null;
+            let pessoasMenosDe50kgEMenosDe1ponto60m = null;
+            let pessoasMaisDe100kgEMaisDe1ponto90m = null;
+
+            for(let i = 1;i <= 7;i++){
+                let altura = parseFloat(prompt(`Digite a ${i}° altura:`));
+                let peso   = parseFloat(prompt(`Digite o ${i}° peso:`));
+
+                mediaAltura += altura;
+
+                if(peso > 90.00){
+                    pessoasMaisDe90kg += 1;
+                }
+
+                if(peso < 50.00 && altura < 1.60){
+                    pessoasMenosDe50kgEMenosDe1ponto60m += 1;
+                }
+
+                if(peso > 100 && altura > 1.90){
+                    pessoasMaisDe100kgEMaisDe1ponto90m += 1;
+                }
+            }
+
+            mediaAltura /= 7;
+
+            h2MediaTotalAltura.innerHTML = mediaAltura;
+            h2PessoasMaisDe90kg.innerHTML = pessoasMaisDe90kg;
+            h2pessoasMenosDe50kgEMenosDe1ponto60m.innerHTML = pessoasMenosDe50kgEMenosDe1ponto60m;
+            h2pessoasMaisDe100kgEMaisDe1ponto90m.innerHTML = pessoasMaisDe100kgEMaisDe1ponto90m;
+        }
+    </script>
+</body>
+</html>

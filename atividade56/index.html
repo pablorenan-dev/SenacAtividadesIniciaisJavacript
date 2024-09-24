@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = function(){
+            var somaDosValoresDigitados = 0;
+            var continuarContando = true;
+            while(continuarContando){
+                var numeroDigitado = parseInt(prompt("Digite um valor"));
+
+                if(numeroDigitado != 1111){
+                    somaDosValoresDigitados += numeroDigitado;
+                }else{
+                    continuarContando = false;
+                    console.log(somaDosValoresDigitados);
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrayFibonacci = [];
+        let numberFibonacci = 0;
+
+
+        for(let i = 0; i <= 15;i++){
+            switch(i){
+                case(0):
+                arrayFibonacci.push(0);
+
+                break;
+                case(1):
+                arrayFibonacci.push(1);
+
+                break;
+                case(2):
+                arrayFibonacci.push(1);
+
+                numberFibonacci = 1;
+                break;
+
+                default:
+                
+                numberFibonacci = numberFibonacci + arrayFibonacci[i-2];
+                arrayFibonacci.push(numberFibonacci);
+            }
+                
+            //0 1 1 2 3 5 8
+        }
+
+        console.log(arrayFibonacci);
+    </script>
+</body>
+</html>

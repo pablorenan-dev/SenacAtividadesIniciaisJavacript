@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de terreno</title>
+    <style>
+        #all{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="all">
+    <div>
+
+        <h1>Insira a largura e o comprimento do terreno para calcular sua area e ver em qual classificação ele se encaixa.</h1>
+        <ul>
+            <li>
+                <label>Comprimento: </label>
+                <input type="number" placeholder="(metros)" id="terreno_comprimento">
+            </li>
+            <li>
+                <label>Largura: </label>
+                <input type="number" placeholder="(metros)" id="terreno_largura">
+            </li>
+            <li>
+                <button onclick="calcular_area_terreno();">Calcular</button>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div>
+
+        <h1 id="resultado"></h1>
+
+    </div>
+    </div>
+
+    <script>
+        function calcular_area_terreno(){
+            let h1Resultado = document.getElementById("resultado");
+            let classificacao_terreno = "";
+            let comprimento = parseFloat(document.getElementById("terreno_comprimento").value);
+            let largura = parseFloat(document.getElementById("terreno_largura").value);
+            let area_terreno = comprimento * largura;
+            
+            if(area_terreno < 100.00){
+                classificacao_terreno = "TERRENO POPULAR";
+            }else if(area_terreno >= 100.00 && area_terreno <= 500){
+                classificacao_terreno = "TERRENO MASTER";
+            }else if(area_terreno > 500){
+                classificacao_terreno = "TERRENO VIP";
+            }
+
+            h1Resultado.innerHTML = `O seu terreno tem ${area_terreno}m², e ele é classificado em: ${classificacao_terreno}`;
+        }
+    </script>
+</body>
+</html>

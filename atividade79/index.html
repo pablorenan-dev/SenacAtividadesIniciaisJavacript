@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+        let arrayTotal = [];
+        let arrayPar = [];
+            for(let i = 1;i <= 10;i++){
+                let promptNumber = prompt(`Escreva o numero ${i}`);
+                arrayTotal.push(promptNumber);
+                if(promptNumber % 2 === 0){
+                    arrayPar.push(promptNumber+": pos: "+i+" ");
+                }
+            }
+
+        alert(`Numeros totais: ${arrayTotal}\n
+        Numeros Pares: ${arrayPar}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/styleLogin.css">
+
+</head>
+
+<body>
+    <!-- se usa position absolute para a seta se sobrepor sobre a div que ocupa a tela inteira -->
+    <div class="seta-voltar">
+        <a href="index.html"><img id="teste" src="../image/setaEsquerda.png" alt="Voltar" height="50px"
+                width="60px"></a>
+    </div>
+    <div class="main d-flex">
+
+        <div class="cartao-login">
+            <!-- Saudações🧙 -->
+            <!-- ao cliclar no botao, pegar todos os valores dos campos e mandar para o arquivo do action(pode ser php, c#...) -->
+            <!-- posicao relativa, é sempre relativa ao elemento pai -->
+            <form action="index.html" method="POST">
+
+                <div class="content-form d-flex">
+
+                    <label>E-mail</label>
+                    <input type="text" placeholder="e-mail">
+                    <!-- se usa label quando quer colcarum texto referent a alguma coisa -->
+                    <label class="mt-16">Senha</label>
+                    <input type="password" placeholder="****">
+                    <!-- para forcar um elemento um embaixo do outro, pode colocar ele um uma div -->
+                     <div class="d-flex mt-16">
+                        <label>Lembrar</label>
+                        <input type="checkbox">
+                     </div>
+                    <button class="mt-16 botao-login mb-8">Entrar</button>
+                </div>
+                <div class="form-actions">
+                    <div>
+                        
+                    
+                    <div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

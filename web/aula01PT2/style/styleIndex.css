@@ -1,0 +1,54 @@
+/* POR PADRAO O BODY TEM UMA MARGIN DE 8PX */
+/* SEMPRE USAR CLASSE, SO USAR ID SE FOR EXTREMAMENTE ESPECIFICO */
+
+body{
+    margin: 0px;
+}
+
+.cabecalho{
+    background-color: rgb(91, 154, 255);
+    height: 85px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* VH É VIEWPORT */
+
+.cabecalhoA{
+    font-size: 15pt;
+    padding: 10px;
+    font-weight: bold;
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+th, td{
+    height: 32px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+th{
+    background-color: lightgrey;
+}
+
+/* toda a coluna impar ira ficar com essa cor */
+tr:nth-child(even){
+    background-color: rgb(240, 240, 240);
+}
+
+tr:hover{
+    background-color: rgb(182, 182, 182);
+}
+
+tr:hover button{
+    background-color: rgb(182, 182, 182);
+}

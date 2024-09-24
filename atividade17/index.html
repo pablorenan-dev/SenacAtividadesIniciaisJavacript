@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de multa mt facil</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira a velocidade em km para ver se precisa pagar multa</h1>
+        <labe>Velocidade: </labe>
+        <input type="number" id="velocidade" placeholder="km/h">
+        <br>
+        <button onclick="calculaMulta();">Verificar se precisa pagar multa</button>
+    </div>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+    <script>
+        function calculaMulta(){
+            let velocidade = parseFloat(document.getElementById("velocidade").value)
+            let valorDaMulta = (velocidade - 80) * 5;
+            let h1Resultado = document.getElementById("resultado");
+
+            if (velocidade > 80){
+                h1Resultado.innerHTML = `Voce passou do limite de velocidade de 80Km/h, e precisa pagar: R$ ${valorDaMulta}`
+            }else{
+                h1Resultado.innerHTML = `Voce nao passou do limite de velocidade de 80Km/h`
+            }
+        }
+    </script>
+</body>
+</html>

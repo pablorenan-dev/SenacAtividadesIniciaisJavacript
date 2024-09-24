@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de aluguel de carros</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Calculdora de aluguel de carros</h1>
+        <h2>Preencha as informações e veja o valor do aluguel a ser pago.</h2>
+
+        <ul>
+            <li>
+                <label>Quantidade de dias que carro foi usado:</label>
+                <input id="dias" type="number">
+            </li>
+            <li>
+                <label>Quantidade de km percorridos:</label>
+                <input id="km" type="number">
+            </li>
+            <li>
+                Selecione o tipo de carro que você usou:
+                <select id="opcaoCarro">
+                    <option>---Selecione uma opção---</option>
+                    <option value="1">
+                        Popular
+                    </option>
+                    <option  value="2">
+                        Luxuoso
+                    </option>
+                </select>
+            </li>
+            <br>
+            <li>
+                <button onclick="calcularAluguel()">Calcular aluguel</button>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+
+        <h1 id="resultado"></h1>
+
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

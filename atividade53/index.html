@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <h2>Homens Cadastrados:</h2>
+        <h3 id="homensCadastrados"></h3>
+        <h2>Mulheres Cadastradas:</h2>
+        <h3 id="mulheresCadastradas"></h3>
+        <h2>Media total de idades:</h2>
+        <h3 id="mediaTotal"></h3>
+        <h2>Media da idade dos homens:</h2>
+        <h3 id="mediaHomens"></h3>
+        <h2>Mulheres com mais de 20 anos:</h2>
+        <h3 id="mulheresMaisDe20Anos"></h3>
+
+    </div>
+
+<script>
+    window.onload = function(){
+        let sexo                 = null;
+        let totalHomens          = null;
+        let totalMulheres        = null;
+        let mediaIdadeTotal      = null;
+        let mediaIdadeHomens     = null;
+        let mulheresMaisDe20Anos = null;
+        //h2 variaveis
+        let h2HomensCadastrados    = document.getElementById("homensCadastrados");
+        let h2MulheresCadastradas  = document.getElementById("mulheresCadastradas");
+        let h2MediaTotal           = document.getElementById("mediaTotal");
+        let h2MediaHomens          = document.getElementById("mediaHomens");
+        let h2mulheresMaisDe20Anos = document.getElementById("mulheresMaisDe20Anos");
+
+        for(let i = 1;i <= 5;i++){
+            
+            sexo = prompt("Digite seu sexo (M/F):")
+            //se escrever algo diferente de M ou F, vai ser true os dois, entao vai entrar no while, até sexo for igual a M, ou F, sendo false, passando direto
+            while(sexo !== "M" && sexo !== "F"){
+                alert("Insira um sexo valido (M/F)...")
+                sexo = prompt("Digite seu sexo (M/F):")
+            }
+
+            let idade = parseInt(prompt(`Digite a ${i}° idade:`));
+            mediaIdadeTotal += idade;
+
+            //verificar se foi cadastrado homem ou mulher
+            switch(sexo){
+                case("M"):
+                    totalHomens += 1;
+                    mediaIdadeHomens += idade;
+                break;
+                case("F"):
+                    totalMulheres += 1;
+            }
+
+            if(sexo === "F" && idade > 20){
+                mulheresMaisDe20Anos += 1;
+            }
+        }
+
+        mediaIdadeHomens /= 5;
+        mediaIdadeTotal  /= 5;
+        h2HomensCadastrados.innerHTML    = totalHomens;
+        h2MulheresCadastradas.innerHTML  = totalMulheres;
+        h2MediaTotal.innerHTML           = mediaIdadeTotal;
+        h2MediaHomens.innerHTML          = mediaIdadeHomens;
+        h2mulheresMaisDe20Anos.innerHTML = mulheresMaisDe20Anos;
+
+    }
+</script>
+</body>
+</html>

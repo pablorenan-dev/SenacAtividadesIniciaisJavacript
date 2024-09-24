@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = function(){
+            let mediaNotaTurma = 0;
+            let totalAlunosAcimaDaMedia = 0;
+            let maiorNotaPos = 0;
+            let arrayNotaAlunos = [];
+            let maiorNota = null;
+            let arrayNotasMaioresPos = [];
+
+            for(let i = 0;i < 10;i++){
+                let notaAluno = parseFloat(prompt(`Digite a nota do aluno ${i+1}:`));
+                arrayNotaAlunos.push(notaAluno);
+                mediaNotaTurma += notaAluno;
+
+                if(notaAluno > maiorNota || maiorNota === null){
+                    maiorNota = notaAluno;
+                }
+            }
+            mediaNotaTurma/=10;
+            //verificar em que posicoes a maior nota esta
+            for(let j = 0;j < 10;j++){
+                if(arrayNotaAlunos[j] === maiorNota){
+                    arrayNotasMaioresPos.push(j);
+                }
+                if(arrayNotaAlunos[j] > mediaNotaTurma){
+                    totalAlunosAcimaDaMedia++;
+                }
+            }
+
+            alert(`A turma tem uma média de: ${mediaNotaTurma}\n
+            Na turma tem ${totalAlunosAcimaDaMedia} alunos acima de média da turma.\n
+            A maior nota digitada foi: ${maiorNota}\n
+            A maior nota aparece nas posições: ${arrayNotasMaioresPos}`)
+        }
+    </script>
+</body>
+</html>

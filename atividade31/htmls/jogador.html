@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Jogador</title>
+    <link rel="stylesheet" href="../styles/jogadorStyle.css">
+</head>
+<body>
+   
+    
+    <div id="main">
+        <a href="index.html"><button id="voltar">Voltar</button></a>
+        <p id="titulo">Modo Jogador</p>
+        <p id="subtitulo">&nbsp;</p>
+        <div id="opcaoJogador">
+            <p class="tituloJogadores">Jogador 1</p>
+            <button onclick="start('1','1')" class="opcoesJogoBotao">Pedra</button>
+            <br>
+            <button onclick="start('2','1')" class="opcoesJogoBotao">Papel</button>
+            <br>
+            <button onclick="start('3','1')" class="opcoesJogoBotao">Tesoura</button>
+            <p id="escreverOpcaoJogador"></p>
+        </div>
+        <div id="opcaoMaquina">
+            <p class="tituloJogadores">Jogador 2</p>
+            <button onclick="start('1','2')" class="opcoesJogoBotao">Pedra</button>
+            <br>
+            <button onclick="start('2','2')" class="opcoesJogoBotao">Papel</button>
+            <br>
+            <button onclick="start('3','2')" class="opcoesJogoBotao">Tesoura</button>
+            <p id="escreverOpcaoMaquina"></p>
+        </div>
+        <button id="recomecar" onclick="recomeca();">Recomeçar</button>
+    </div>
+
+    <script src="../scripts/jogadorScript.js"></script>
+</body>
+</html>

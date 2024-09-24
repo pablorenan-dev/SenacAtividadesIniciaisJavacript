@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 650px;
+    width: 800px;
+    background-color: rgb(56, 52, 65);
+    text-align: center;
+    font-family: "Chivo", sans-serif;
+    border-radius: 12px;
+}
+
+#opcaoJogador{
+    background-color: rgb(0, 158, 0);
+    height: 400px;
+    width: 350px;
+    float: left;
+    margin-top: 0px;
+    margin-left: 40px;
+    font-size: 20pt;
+    font-family: "Chivo", sans-serif;
+    border-radius: 6px;
+}
+
+#opcaoMaquina{
+    background-color: rgb(88, 52, 88);
+    height: 400px;
+    width: 350px;
+    float: left;
+    margin-top: 0px;
+    margin-left: 20px;
+    font-size: 20pt;
+    font-family: "Chivo", sans-serif;
+    border-radius: 6px;
+}
+
+#titulo{
+    font-size: 22pt;
+    color: white;
+    text-decoration: underline;
+}
+
+#subtitulo{
+    font-size: 22pt;
+    color: white;
+}
+
+#opcoesJogo{
+    background-color: brown;
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 300px;
+    width: 275px;
+}
+
+.opcoesJogoBotao{
+    margin-top: 14px;
+    height: 60px;
+    width: 175px;
+    background-color: rgb(233, 177, 255);
+    font-size: 15pt;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.opcoesJogoBotao:hover{
+    background-color: rgb(68, 13, 68);
+}
+
+#recomecar{
+    margin-top: 15px;
+    height: 60px;
+    width: 175px;
+    background-color: rgb(233, 177, 255);
+    font-size: 15pt;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#recomecar:hover{
+    background-color: rgb(68, 13, 68);
+    
+}
+
+.tituloJogadores{
+    text-decoration: underline;
+    font-size: 20pt;
+}
+
+#voltar{
+    float: left;
+    height: 25px;
+    width: 80px;
+    margin-left: 20px;
+    margin-top: 4px;
+    background-color: rgb(233, 177, 255);
+    font-size: 12pt;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#voltar:hover{
+    background-color: rgb(68, 13, 68);
+}
+
+#escreverOpcaoJogador{
+    color: white;
+}
+
+#escreverOpcaoMaquina{
+    color: white;
+}

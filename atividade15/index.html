@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de dias trabalhados por mês</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira os dias trabalhados do mês do funcionario</h1>
+        <label>Dias trabalhados por mês: </label>
+        <input id="diasTrabalhados" type="number" placeholder="dias">
+        <br>
+        <button onclick="calcularOTotalDeDiasTrabalhados();">Calcular</button>
+    </div>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+    <script>
+        function calcularOTotalDeDiasTrabalhados(){
+            let diasTrabalhados = parseInt(document.getElementById("diasTrabalhados").value);
+            let salarioDoFuncionario = ((diasTrabalhados * 8) * 25);
+            let h1Resultado = document.getElementById("resultado");
+           
+            h1Resultado.innerHTML = `O salario total do funcionario, levando em consideração que cada dia tem 8 horas trabalhas, e cada hora trabalhada vale R$ 25,00, é: ${salarioDoFuncionario}`
+        }
+    </script>
+</body>
+</html>

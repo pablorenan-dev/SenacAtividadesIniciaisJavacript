@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de media de alunos</title>
+    <style>
+        #resultado{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+
+            <h1>Insira as 2 notas do aluno, e veja se esta o aluno tem um bom aproveitamento</h1>
+            <ul>
+                <li>
+                    <label>Primeira nota: </label>
+                    <input type="number" id="nota1">
+                </li>
+            
+            <br>
+                <li>
+                    <label>Segunda nota: </label>
+                    <input type="number" id="nota2">
+                </li>
+            <br>
+                <li>
+                    <button onclick="calcularMedia();">Verificar se o aluno tem bom aproveitamento</button>
+                </li>
+            </ul>
+    </div>
+
+    <div>
+
+        <h1 id="resultado"></h1>
+
+    </div>
+
+    <script>
+        function verificarSeEstaReprovado(media, resultado){
+            if (media > 7 && isNaN(media) === false){
+                resultado.innerHTML = `O aluno tem uma media de nota de ${media}, e um bom aproveitamento(>7)`;
+            }else if ((media <= 7 && isNaN(media) === false)){
+                resultado.innerHTML = `O aluno tem uma media de nota de ${media}, e um mal aproveitamento(<7)`;
+            }else{
+                resultado.innerHTML = `Insira um número.`
+            }
+        }
+
+        function calcularMedia(){
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let resultado = document.getElementById("resultado");
+
+            let media = ((nota1 + nota2) / 2);
+
+            verificarSeEstaReprovado(media, resultado)
+        }
+    </script>
+</body>
+</html>

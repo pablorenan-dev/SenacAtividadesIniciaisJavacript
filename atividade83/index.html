@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arrayMain = [];
+        let holdValue = 0;
+        for(let i = 0;i < 20;i++){
+            let randomNumber = Math.floor(Math.random() * 99);
+            arrayMain.push(randomNumber);
+        }
+        for(let j = 0;j < 20;j++){
+            for(let l = 0;l < 20;l++){
+                if(arrayMain[l] > arrayMain[l+1]){
+                    holdValue = arrayMain[l];
+                    arrayMain[l] = arrayMain[l+1];
+                    arrayMain[l+1] = holdValue;
+                }
+            }
+        }
+
+        console.log(arrayMain);
+    </script>
+</body>
+</html>

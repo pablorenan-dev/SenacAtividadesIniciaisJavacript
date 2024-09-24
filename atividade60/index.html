@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = function(){
+            let pessoaMaisVelha = "";
+            let maiorIdade = null;
+            let mulherMaisJovem = "'Não foi adicionada nem uma mulher'";
+            let idadeMulherMaisJovem = null;
+            let totalIdade = 0;
+            let totalPessoas = 0;
+            let homensComMaisDe30Anos = 0;
+            let mulheresMenosDe18Anos = 0;
+            let idade = 0;
+            let sexo = null;
+
+            while(true){
+                totalPessoas++;
+                nome = prompt("Digite o nome da pessoa:");
+                sexo = prompt("Digite o sexo da pessoa(M/F):");
+                if(sexo !== "F" && sexo !== "M"){
+                    let isSexoErrado = true;
+                    while(isSexoErrado){
+                        sexo = prompt("Digite um valor entre(M/F):");
+                        if(sexo === "F" || sexo === "M"){
+                            isSexoErrado = false;
+                        }
+                    }
+                }
+                
+                idade = parseInt(prompt("Digite a idade da pessoa:"));
+                totalIdade += idade;
+
+                //if para idade para homens com mais de 30 anos
+                if(idade > 30 && sexo === "M"){
+                    homensComMaisDe30Anos++;
+                }
+
+                //if para mulheres com menos de 18 anos
+                if(idade < 18 && sexo === "F"){
+                    mulheresMenosDe18Anos++;
+                }
+
+                //atribuindo valores para realizar a comparação
+                if(maiorIdade === null){
+                    maiorIdade = idade;
+                }
+
+                if(idadeMulherMaisJovem === null && sexo === "F"){
+                    idadeMulherMaisJovem = idade;
+                    mulherMaisJovem = nome;
+                }
+                
+                //realizando a comparação
+                if(idadeMulherMaisJovem > idade && sexo === "F"){
+                    idadeMulherMaisJovem = idade;
+                    mulherMaisJovem = nome;
+                }
+                
+                if(maiorIdade < idade){
+                    maiorIdade = idade;
+                    pessoaMaisVelha = nome;
+                }
+
+                
+
+                let promptDesejaContinuar = prompt("Deseja adicionar outra pessoa?(S/N)")
+                if(promptDesejaContinuar === "N"){
+                    break;
+                }
+
+            }
+
+            let media = totalIdade / totalPessoas;
+
+            alert(`O nome da pessoa mais velha é: ${pessoaMaisVelha}
+            O nome da mulher mais jovem é: ${mulherMaisJovem}
+            A media de todas idade é: ${media}
+            Total de homens que tem mais de 30 anos: ${homensComMaisDe30Anos}
+            Total de mulheres com menos de 18 anos: ${mulheresMenosDe18Anos}`)
+
+        }
+    </script>
+</body>
+</html>

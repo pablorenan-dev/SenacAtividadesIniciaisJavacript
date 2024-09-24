@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovador de empréstimo bancário</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Preencha os campos e veja se é valido você fazer um emprestimo para comprar algo do valor que você preencheu</h1>
+        <ul>
+            <li>
+                <label>Valor: </label>
+                <input id="valor" type="number">
+            </li>
+            <li>
+                <label>Seu salario: </label>
+                <input id="salario" type="number">
+            </li>
+            <li>
+                <label>Anos em que vai pagar: </label>
+                <input id="anos" type="number">
+            </li>
+            <li>
+                <button onclick="verificar();">
+                    Verificar
+                </button>
+            </li>
+            
+        </ul>
+        
+
+    </div>
+
+    <div>
+
+        <h1 id="resultado"></h1>
+
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

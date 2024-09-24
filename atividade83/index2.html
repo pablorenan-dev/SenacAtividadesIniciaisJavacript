@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arrayMain = [5, 2, 4, 6, 1, 3];
+        let holdValue = 0;
+        // for(let i = 0;i < 20;i++){
+        //     let randomNumber = Math.floor(Math.random() * 99);
+        //     arrayMain.push(randomNumber);
+        // }
+        let teste1;
+        let teste2;
+        let isPrimeiraVez = true;
+        //INSERTION SORT
+        //ESTA PERTO
+        for(let i = 1;i <= 5;i++){
+            if(arrayMain[i] < arrayMain[i-1]){
+                //achar menor valor dos Sorted
+                if(isPrimeiraVez){
+                    holdValue = arrayMain[i-1];
+                    arrayMain[i-1] = arrayMain[i];
+                    arrayMain[i] = holdValue;
+                    isPrimeiraVez = false;
+                }else{
+
+                for(let j = i;j >= 0;j--){
+                    
+                    
+                }
+                
+                }
+            
+            }
+            
+            
+        }
+
+        console.log(arrayMain);
+    </script>
+</body>
+</html>

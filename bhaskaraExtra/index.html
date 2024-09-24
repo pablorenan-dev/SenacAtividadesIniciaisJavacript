@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Bhaskara</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira os seus valores para calcular fazer o calculo de Bhaskara</h1>
+        <label>Valor A:</label>
+        <input id="valorA" type="number" placeholder="A">
+        <br>
+        <label>Valor B:</label>
+        <input id="valorB" type="number" placeholder="B">
+        <br>
+        <label>Valor C:</label>
+        <input id="valorC" type="number" placeholder="C">
+        <br>
+        <button onclick="calcularBhaskara();">Calcular</button>
+    </div>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+    <script>
+        function calcularBhaskara(){
+            let valorA = parseFloat(document.getElementById("valorA").value);
+            let valorB = parseFloat(document.getElementById("valorB").value);
+            let valorC = parseFloat(document.getElementById("valorC").value);
+            let h1Resultado = document.getElementById("resultado");
+            let Delta = ((valorB ** 2) - 4 * (valorA * valorC));
+
+            let bhaskaraParte1 = ((-Math.abs(valorB))+(Math.sqrt(Delta))) / (2 * valorA);
+            let bhaskaraParte2 = ((-Math.abs(valorB))-(Math.sqrt(Delta))) / (2 * valorA);
+
+            console.log("B1 ="+bhaskaraParte1)
+            console.log("B2 ="+bhaskaraParte2)
+            h1Resultado.innerHTML = ("x' = "+bhaskaraParte1+"<br>"+"x'' = "+bhaskaraParte2)
+        }
+    </script>
+</body>
+</html>

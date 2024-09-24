@@ -1,0 +1,115 @@
+body{
+    margin: 0px;
+}
+
+.main{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.cartao-login{
+    background-color: rgb(209, 255, 240);
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: black 8px 8px 16px 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 16px;
+}
+
+/* .cartao-login:active{
+    transform: scale(1.5,1.5);
+    background-color: red;
+} */
+
+/* todo form que esta dentro de um elemento com classe cartao-login tem essa margin */
+.cartao-login form{
+    margin: 16px;
+}
+
+.content-form{
+    display: flex;
+}
+
+.seta-voltar{
+    position: absolute;
+    /* top e left sao a posicao da tela(uma coordenada) */
+    top: 16px;
+    left: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.seta-voltar:hover{
+    background-color: grey;
+    transition: 0.2s;
+    transform: scale(1.05, 1.05);
+}
+
+.seta-voltar:active{
+    background-color: rgb(48, 48, 48);
+    transition: 0.2s;
+}
+
+.content-form{
+    /* nao precisa necessariamente de display: flex;
+    porque o content form herda o display: flex;
+    do outro pai mais distante */
+    flex-direction: column;
+}
+
+.content-form input[type=text],
+.content-form input[type=password]{
+    size: 100%;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.botao-login{
+    border: blue solid 1px;
+    border-radius: 8px;
+    background-color: rgb(0, 183, 255);
+    height: 32px;
+    cursor: pointer;
+}
+
+.botao-login:hover{
+    background-color: blue;
+    transform: scale(1.02,1.02);
+    transition: 0.1s;
+}
+
+.botao-login:active{
+    background-color: rgb(0, 0, 120); 
+    transform: scale(0.98,0.98);
+    transition: 0.1s;
+}     
+
+.m-8{
+    margin: 8px;
+}
+
+.m-16{
+    margin: 16px;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.mb-8{
+    margin-bottom: 8px;
+}
+
+.ml-8{
+    margin-left: 8px;
+}

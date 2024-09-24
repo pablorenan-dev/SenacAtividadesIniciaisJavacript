@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Bhaskara</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Para fazer o calculo de delta, insira os valores</h1>   
+        <label>Valor A:</label>
+        <input id="valueA" type="number" placeholder="A">
+        <br>
+        <label>Valor B:</label>
+        <input id="valueB" type="number" placeholder="B">
+        <br>
+        <label>Valor C:</label>
+        <input id="valueC" type="number" placeholder="C">
+        <br>
+        <button onclick="calculateDelta();">Calcular</button>
+    </div>
+    <div>
+        <h1 id="resultDelta"></h1>
+    </div>
+
+    <script>
+        function calculateDelta(){
+            let valueA = parseFloat(document.getElementById("valueA").value);
+            let valueB = parseFloat(document.getElementById("valueB").value);
+            let valueC = parseFloat(document.getElementById("valueC").value);
+            let h1ResultDelta = document.getElementById("resultDelta");
+            let Delta = ((valueB ** 2) - 4 * (valueA * valueC));
+            
+            h1ResultDelta.innerHTML = `O resultado do delta, de acordo do seus numeros, é: ${Delta}`;
+        }
+
+    </script>
+</body>
+</html>

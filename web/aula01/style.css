@@ -1,0 +1,60 @@
+#main{
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 550px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#tudo{
+    position: absolute;
+    width: 100%;
+    bottom : 0px;
+    background-color: red;
+}
+
+#tituloCloneCartoes{
+    font-family: "Comic Sans MS" ,Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    background-color: aqua;
+    font-size: 20pt;
+    padding: 20px;
+}
+
+#clonarButton{
+    background-color: greenyellow;
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: "Comic Sans MS" ,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25pt;
+    margin-right: 20px;
+}
+
+#clonarButton:hover{
+    background-color: rgb(119, 180, 28);
+    transition: 0.2s;
+}
+
+#desclonarButton{
+    background-color: rgb(47, 255, 179);
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: "Comic Sans MS" ,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25pt;
+    margin: auto;
+    margin-right: 20px;
+}
+
+#desclonarButton:hover{
+    background-color: rgb(18, 157, 131);
+    transition: 0.2s;
+}
+
+

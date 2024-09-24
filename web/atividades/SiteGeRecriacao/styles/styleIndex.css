@@ -1,0 +1,144 @@
+:root{
+    --blue-color: blue;
+    --brown-color: brown;
+    --green-color: green;
+    --red-color: red;
+    --orange-color: orange;
+    --creme-color: rgb(246, 200, 115);
+    --black-color: black;
+    --white-color: white;
+}
+
+body{
+    margin: 0px;
+}
+
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    width: 1350px;
+    margin: auto;
+}
+
+.nav-content-link,
+.nav-content-signup{
+    display: flex;
+}
+
+.signup-link,
+.nav-link{
+    padding: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.nav-link-green-upper{
+    padding-top: 12px;
+    padding-bottom: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+
+
+.font-Gill-Sans{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pl-8{
+    padding-left: 8px;
+}
+
+.pl-16{
+    padding-left: 16px;
+}
+
+.f-bold{
+    font-weight: bold;
+}
+
+.fs-28{
+    font-size: 28px;
+}
+
+.fs-26{
+    font-size: 26px;
+}
+
+.fs-32{
+    font-size: 32px;
+}
+
+.signup-link:hover{
+    color: blue;
+}
+
+.white-link{color : var(--white-color)}
+.blue-link{color : var(--blue-color)}
+.brown-link{color : var(--brown-color)}
+.green-link{color : var(--green-color)}
+.red-link{color : var(--red-color)}
+.orange-link{color : var(--orange-color)}
+.creme-link{color : var(--creme-color)}
+.black-link{color : var(--black-color)}
+
+.nav-link-green-upper.white-link:hover{ border-bottom: 2px solid var(--white-color)}
+.nav-link.blue-link:hover{ border-bottom: 2px solid var(--blue-color)}
+.nav-link.brown-link:hover{ border-bottom: 2px solid var(--brown-color)}
+.nav-link.green-link:hover{ border-bottom: 2px solid var(--green-color)}
+.nav-link.red-link:hover{ border-bottom: 2px solid var(--red-color)}
+.nav-link.orange-link:hover{ border-bottom: 2px solid var(--orange-color)}
+.nav-link.creme-link:hover{ border-bottom: 2px solid var(--creme-color)}
+.nav-link.black-link:hover{ border-bottom: 2px solid var(--black-color)}
+
+.nav-green-upper{
+    background-color: #06AA48;
+}
+
+.nav-green-upper-content{
+    width: 1350px;
+    margin: auto;
+}
+
+.svg-person{
+    height: 24px;
+    width: 24px;
+}
+
+.svg-menu{
+    height: 20px;
+    width: 20px;
+}
+
+.svg-shield{
+    height: 26px;
+    width: 26px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align-itens-center{
+    align-items: center;
+}
+
+.justify-content-space-between{
+    justify-content: space-between;
+}
+
+.bt-1{
+    border-top: 1px solid #20b25a;
+}
+
+.nav-green-upper-center{
+    background-color: aqua;
+}
+
+.br-dotted{
+    border-right: 2px dotted white;
+}

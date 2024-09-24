@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10, altura de parede</title>
+</head>
+<body>
+    <div>
+        <h1>Calcule a altura de uma parede</h1>
+
+        <label>Insira a altura da parede</label>
+        <input id="altura" type="number">
+        <br>
+
+        <label>Insira a largura da parede</label>
+        <input id="largura" type="number">
+        <br>
+        <button onclick="calcParede()">Calcular</button>
+    </div>
+
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+        function calcParede(){
+            let altura    = parseFloat(document.getElementById("altura").value)
+            let largura   = parseFloat(document.getElementById("largura").value)
+            let resultado = document.getElementById("resultado")
+            let calcArea  = (altura * largura);
+            let calcTinta = (calcArea / 2);
+            resultado.innerHTML = (`A area da parede a ser pintada: ${calcArea}R$ <br> A quantidade de tinta necessaria para pintar a parede é de: ${calcTinta}l`)
+            
+        }
+    </script>
+</body>
+</html>

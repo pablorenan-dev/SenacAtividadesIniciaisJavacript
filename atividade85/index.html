@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let vetorNomesFuncionarios   = [];
+        let vetorIdadeFuncionarios   = [];
+        let vetorSalarioFuncionarios = []
+
+        let vetorMulheresQueGanhamMaisDe5000 = [];
+        for(let i = 0;i < 5;i++){
+            let nomeFuncionario = prompt(`Insira o nome do funcionario ${i+1}:`);
+            let sexoFuncionario = prompt(`Insira o sexo do funcionario ${i+1}:`);
+            let salarioFuncionario = parseFloat(prompt(`Insira o salario do funcionario ${i+1}:`));
+            vetorNomesFuncionarios.push(nomeFuncionario);
+            vetorIdadeFuncionarios.push(sexoFuncionario);
+            vetorSalarioFuncionarios.push(salarioFuncionario);
+
+            if(sexoFuncionario === "F" && salarioFuncionario > 5000.00){
+                vetorMulheresQueGanhamMaisDe5000.push(nomeFuncionario);
+            }
+
+            
+        }
+        alert(`Mulheres que recebem mais de 5 mil: ${vetorMulheresQueGanhamMaisDe5000}`);
+    </script>
+</body>
+</html>

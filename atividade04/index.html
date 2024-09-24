@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira abaixo os as notas do aluno</h1>
+    </div>
+
+    <div>
+
+        <ol>
+            <li>
+                <input id="valor01" type="number" placeholder="Primeiro valor">
+            </li>
+            <li>
+                <input id="valor02" type="number" placeholder="Segundo valor">
+            </li>
+            <button id="buttonMedia" onclick="calcularMedia()">Calcular a média</button>
+        </ol>
+    
+        <div>
+            <h1 id="resultado">oi</h1>
+        </div>
+    </div>
+
+    <script>
+        function calcularMedia(){
+            console.log("entrou 1")
+            let valor01   = parseInt(document.getElementById("valor01").value);
+            let valor02   = parseInt(document.getElementById("valor02").value);
+            let resultado = document.getElementById("resultado");
+            let media     = ((valor01 + valor02) / 2)
+
+            resultado.innerHTML = media;
+        }
+    </script>
+</body>
+</html>

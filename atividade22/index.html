@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você ja esta na idade de se alistar?</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Escreva a sua data de Nascimento e veja sua situação em relação ao alistamento militar</h1>
+        <ul>
+            <li>
+            <label>Ano de Nascimento</label>
+            <input type="number" placeholder="Ano" id="anoNascimento">
+            </li>
+            <li>
+            <button onclick="VerificarAlistamentoMilitar();">Verificar</button>
+            </li>
+        </ul>
+
+    </div>
+    <div>
+
+        <h2 id="resultado"></h2>
+
+    </div>
+
+    <script>
+        function VerificarAlistamentoMilitar(){
+            let anoNascimento = parseInt(document.getElementById("anoNascimento").value);
+            let dataAgora     = Date.now(); //pega a data atual do pc do cliente em segundos
+            let anoAtual      = (new Date(dataAgora)).getFullYear(); //Transforma os segundos em anos
+            let idade         = anoAtual - anoNascimento;
+            let h1Resultado   = document.getElementById("resultado");
+            let maisDe18AnosPassados  = 18 - idade;
+            let menosDe18AnosPassados = idade - 18;
+
+            if(idade < 18){
+                h1Resultado.innerHTML = `Ja se passaram ${maisDe18AnosPassados} ano(s) para você se alistar`;
+            }else if(idade > 18){
+                h1Resultado.innerHTML = `Faltam ${menosDe18AnosPassados} ano(s) para o alistamento militar`;
+            }else if(idade === 18){
+                h1Resultado.innerHTML = `Você está na idade de se alistar!`;
+            }
+        }
+    </script>
+</body>
+</html>

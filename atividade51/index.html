@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <h2 id="resultadoMaior"></h2>
+
+    </div>
+
+    <div>
+
+        <h2 id="resultadoMenor"></h2>
+
+    </div>
+
+    <script>
+        window.onload = function(){
+            let h2ResultadoMaior = document.getElementById("resultadoMaior");
+            let h2ResultadoMenor = document.getElementById("resultadoMenor");
+            let valorMaior = null;
+            let valorMenor = null;
+
+            for(let i = 1;i <= 8;i++){
+                let valorProduto = parseFloat(prompt("Insira o valor do produto "+i+":"));
+
+                //Ver maior
+                if(valorMaior < valorProduto || valorMaior == null){
+                    valorMaior = valorProduto;
+                }
+
+                //Ver menor
+                if(valorMenor > valorProduto  || valorMenor == null){
+                    valorMenor = valorProduto;
+                }                       
+            }
+
+            h2ResultadoMaior.innerHTML = `O maior valor foi: ${valorMaior}`;
+            h2ResultadoMenor.innerHTML = `O menor valor foi: ${valorMenor}`;
+        }
+    </script>
+</body>
+</html>

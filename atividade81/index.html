@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = function(){
+        let arrayIdadePessoa = [];
+        let arrayPessoasComMaisDe25AnosPos = [];
+        let mediaPessoas = 0;
+        let maiorIdade = null;
+        let maiorIdadePos = 0;
+
+        for(let i = 1;i <= 15;i++){
+            let idadePessoa = parseInt(prompt(`Escreva a idade da pessoa ${i}:`));
+            arrayIdadePessoa.push(idadePessoa);
+            mediaPessoas+=idadePessoa;
+            //achar a maior idade
+            if(idadePessoa > maiorIdade || maiorIdade === null){
+                maiorIdade = idadePessoa;
+                maiorIdadePos = i;
+            }
+            //achar pessoas com mais de 25 anos
+            if(idadePessoa > 25){
+                arrayPessoasComMaisDe25AnosPos.push(i);
+            }
+        }
+        mediaPessoas/=15;
+        alert(`Posição das pessoas com mais de 25 anos: ${arrayPessoasComMaisDe25AnosPos}\n
+        Media das idades: ${mediaPessoas}\n
+        Maior idade: ${maiorIdade}\n
+        Posição da maior idade: ${maiorIdadePos}`);
+        
+        }
+
+        
+        
+    </script>
+</body>
+</html>

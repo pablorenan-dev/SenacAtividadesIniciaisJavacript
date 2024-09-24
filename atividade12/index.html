@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de promoção de produto</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Insira um preço para calcular o seu preço promocional</h1>
+        <label>Preço: </label>
+        <input id="preco" type="number" placeholder="Preço">
+        <br>
+        <button onclick="calcularPrecoPromocional();">Calcular o preço promocional</button>
+    </div>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+        function calcularPrecoPromocional(){
+            let preco = parseFloat(document.getElementById("preco").value)
+            let h1Resultado = document.getElementById("resultado");
+            let precoPromocional = (preco - (preco * 0.05));
+
+            h1Resultado.innerHTML = `O preço promocional, de acordo com o seu preço é: ${precoPromocional}`
+        }
+    </script>
+</body>
+</html>

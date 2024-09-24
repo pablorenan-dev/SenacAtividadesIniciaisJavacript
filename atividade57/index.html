@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        window.onload = function(){
+            // let isContinuar = true;
+
+            // while(isContinuar){
+            //     let sexo = prompt("Digite o sexo desse usuario(F/M):");
+                
+            //     if(sexo == "M" || sexo == "F"){
+            //         let salario = parseFloat(prompt("Digite o salario desse funcionario:"));
+
+            //     }else{
+            //         alert("Digite um valor válido");
+            //     }
+                    
+            // }
+
+            let isContinuar = true;
+            let totalSalarioHomem  = 0;
+            let totalSalarioMulher = 0;
+
+            while(isContinuar){
+                let sexo = prompt("Digite o sexo desse usuario(F/M):");
+                while(sexo !== "F" && sexo !== "M"){
+                    sexo = prompt("DIGITE UM VALOR ENTRE(F/M):");
+                    if(sexo === "F" || sexo === "M"){
+                        break;
+                    }
+                }
+                let salario = parseFloat(prompt("Digite o salario desse funcionario:"));
+                if(sexo === "M"){
+                    totalSalarioHomem += salario;
+                }else{
+                    totalSalarioMulher += salario;
+                }
+
+                let adicionarOutroFuncionario = prompt("Deseja adicionar outro funcionario?(S/N):");
+                while(adicionarOutroFuncionario !== "S" && adicionarOutroFuncionario !== "N"){
+                    adicionarOutroFuncionario = prompt("DIGITE UM VALOR ENTRE(S/N):");
+                    if(adicionarOutroFuncionario === "F" || adicionarOutroFuncionario === "M"){
+                        break;
+                    }
+                }
+
+                if(adicionarOutroFuncionario === "N"){
+                    break;
+                }
+                
+            }
+
+            console.log(`Foi pago um total de ${totalSalarioHomem} aos homens.\nFoi pago um total de ${totalSalarioMulher} as mulheres.`);
+        }
+    </script>
+</body>
+</html>

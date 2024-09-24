@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de fumante</title>
+    <style>
+        #resultado{
+            color:red;
+        }
+        #diasPerdidos{
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <ul>
+            <h1>Calculadora de dia de vida perdido de um fumante.</h1>
+            <h2>-Insira quantos cigarros fumados por dia, e a quantos anos se fuma</h2>
+                <li>
+                    <label>Quantidade de cigarros fumados por dias: </label>
+                    <input type="number" placeholder="cigarros por dia" id="cigarrosFumadosPorDia">
+                </li>
+            <br>
+                <li>
+                    <label>Quantidade de anos sendo fumante: </label>
+                    <input type="number" placeholder="anos sendo fumante" id="anosSendoFumante">
+                </li>
+            <br>
+            <button onclick="calcularQuantidadeDeDiasPerdidos();">Calcular quantidade de dias perdidos</button>
+        </ul>
+    </div>
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+        function calcularQuantidadeDeDiasPerdidos(){
+            let cigarrosPorDia = parseInt(document.getElementById("cigarrosFumadosPorDia").value);
+            let qntDeAnosSendoFumante = parseInt(document.getElementById("anosSendoFumante").value);
+            let h1Resultado = document.getElementById("resultado");
+            let diasPerdidos = parseInt(((((cigarrosPorDia * (365 * qntDeAnosSendoFumante)) * 10) / 60) / 24));
+
+            h1Resultado.innerHTML = `Você ja perdeu <span id="diasPerdidos">${diasPerdidos}</span> dias de vida`
+        }
+    </script>
+</body>
+</html>

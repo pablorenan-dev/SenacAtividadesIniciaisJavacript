@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valorInicial = parseInt(prompt("Digite o primeiro valor:"));
+        let valorFinal = parseInt(prompt("Digite o ultimo valor:"));
+        let valorIncremento = parseInt(prompt("Digite o incremento:"));
+
+        if(valorInicial < valorFinal){
+            for(let i = valorInicial;i <= valorFinal;i+=valorIncremento){
+                console.log(i);
+            }
+        }else{
+            for(let i = valorInicial;i >= valorFinal;i-=valorIncremento){
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

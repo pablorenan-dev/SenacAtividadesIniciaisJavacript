@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arrayPeople = [];
+
+        for(let i = 0;i < 7;i++){
+            let personName = prompt(`Escreva o nome da pessoa ${i+1}:`);
+            arrayPeople.push(personName);
+        }
+        
+        let sizeArray = (arrayPeople.length) - 1;
+        for(let j = 0;j <= 3;j++){
+            let holder = arrayPeople[j];
+            arrayPeople[j] = arrayPeople[sizeArray];
+            arrayPeople[sizeArray] = holder;
+            sizeArray-=1;
+        }
+
+        alert(arrayPeople);
+    </script>
+</body>
+</html>

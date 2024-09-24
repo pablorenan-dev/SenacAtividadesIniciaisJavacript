@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let arrayTotal = [];
+        let arrayTotalMultiploDe10 = [];
+        for(let i = 1;i <= 15;i++){
+            let promptNumber = prompt(`Escreva o numero ${i}`);
+            arrayTotal.push(promptNumber);
+            if(promptNumber % 10 === 0){
+                arrayTotalMultiploDe10.push(promptNumber);
+            }
+        }
+
+        alert(`Numeros totais: ${arrayTotal}\n
+        Numeros multiplos de 10: ${arrayTotalMultiploDe10}`);
+    </script>
+</body>
+</html>

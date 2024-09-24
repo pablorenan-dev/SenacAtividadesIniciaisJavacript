@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9, reais para dolares</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Conversão de reais para dolares</h1>
+        <label>Insira sua quantidade em reais:</label>
+        <br>    
+        <input type="number" id="valor01" placeholder="R$">
+        <button onclick="reaisParaDolar()">Converter</button>
+    </div>
+    
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+        function reaisParaDolar(){
+            let reais     = parseFloat(document.getElementById("valor01").value);
+            let resultado = document.getElementById("resultado");
+            let calculo   = (reais / 4.97).toFixed(2);
+
+            resultado.innerHTML = (`Resultado em dolar: U$${calculo}`)
+        }
+    </script>
+</body>
+</html>

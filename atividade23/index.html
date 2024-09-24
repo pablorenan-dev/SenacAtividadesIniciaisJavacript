@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoção do Dia da Mulher</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+
+        <h1>Promoção do dia das mulheres!,</h1>
+        <h2>Preencha as suas informções e ganhe desconto!, principalmente se você é mulher.</h2>
+        <ul>
+            <li>
+                <label>Nome: </label>
+                <input type="text" placeholder="Nome" id="nomeUsuario">
+            </li>
+            <li>
+                <label>Sexo: </label>
+                <br>
+                <input type="radio" id="sexoMasculinoUsuario" name="sexo">
+                <label>Feminino</label>
+                <br>
+                <input type="radio" id="sexoFemininoUsuario" name="sexo">
+                <label>Masculino</label>
+            </li>
+            <li>
+                <label>Preço total das compras</label>
+                <input type="number" placeholder="Valor das compras" id="precoDasCompras">
+            </li>
+            <br>
+            <li>
+                <button onclick="calcularPrecoTotal();">Calcular preço total das compras</button>
+            </li>
+            
+        </ul>
+
+    </div>
+
+    <div>
+        <h1 id="resultado"></h1>
+    </div>
+
+    <script>
+        function calcularPrecoTotal(){
+            let precoDasCompras = parseFloat(document.getElementById("precoDasCompras").value);
+            let radioMasculino  = document.getElementById("sexoFemininoUsuario").checked;
+            let radioFeminino   = document.getElementById("sexoMasculinoUsuario").checked;
+            let h1Resultado     = document.getElementById("resultado");
+            let precoFinal      = 0;
+
+            if(radioMasculino === true){
+                precoFinal = (precoDasCompras - (precoDasCompras * 0.05));
+                h1Resultado.innerHTML = `O preco final é R$ ${precoFinal.toFixed(2)}`;
+            }else if(radioFeminino === true){
+                precoFinal = (precoDasCompras - (precoDasCompras * 0.13));
+                h1Resultado.innerHTML = `O preco final é R$ ${precoFinal.toFixed(2)}`;
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
